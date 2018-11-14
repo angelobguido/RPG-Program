@@ -1,0 +1,80 @@
+import random
+from time import sleep
+print('=' * 10, '\033[36mSistema de dados para RPGs [V.2]\033[m', '=' * 10)
+esc = 6
+d4 = random.randint(1, 4)
+d6 = random.randint(1, 6)
+d8 = random.randint(1, 8)
+d12 = random.randint(1, 12)
+d20 = random.randint(1, 20)
+while esc == 6:
+    print("""\033[36mMenu de dados\033[m:
+[1] -> \033[4;31mD4\033[m
+[2] -> \033[4;32mD6\033[m
+[3] -> \033[4;33mD8\033[m
+[4] -> \033[4;34mD12\033[m
+[5] -> \033[4;35mD20\033[m
+[6] -> \033[4;36mEscolher outro dado\033[m
+[7] -> \033[4;30mSair do programa\033[m""")
+    esc = int(input('Qual dado deseja?:'))
+    while esc != 1 and esc != 2 and esc != 3 and esc != 4 and esc != 5 and esc != 6 and esc != 7:
+        print('Valor inválido! Por favor, escolha entre os válidos!')
+        esc = int(input('Qual dado deseja?:'))
+    if esc == 1:
+        print('Você selecionou o \033[4;31mD4\033[m!')
+        sleep(0.5)
+        print('\033[36mRolando dado...\033[m')
+        sleep(2)
+        print('\033[4;30mSeu resultado\033[m: {}'.format(d4))
+        sleep(0.5)
+        esc = int(input('Aperte 6 para escolher um novo dado:'))
+        while esc != 6:
+            print('\033[31mValor inválido! Por favor, escolha entre os válidos!\033[m')
+            esc = int(input('Aperte 6 para escolher um novo dado:'))
+    if esc == 2:
+        print('Você selecionou o \033[4;32mD6\033[m!')
+        sleep(0.5)
+        print('\033[36mRolando dado...\033[m')
+        sleep(2)
+        print('\033[4;30mSeu resultado\033[m: {}'.format(d6))
+        sleep(0.5)
+        esc = int(input('Aperte 6 para escolher um novo dado:'))
+        while esc != 6:
+            print('Valor inválido! Por favor, escolha entre os valores válidos!')
+            esc = int(input('Aperte 6 para escolher novo dado:'))
+    if esc == 3:
+        print('Você selecionou o D8!')
+        sleep(0.5)
+        print('Rolando dado...')
+        sleep(2)
+        print('Seu resultado: {}'.format(d8))
+        sleep(0.5)
+        esc = int(input('Aperte 6 para selecionar um novo dado:'))
+        while esc != 6:
+            print('Valor inválido! Por favor, escolha entre os valores válidos!')
+            esc = int(input('Aperte 6 para selecionar um novo dado:'))
+    if esc == 4:
+        print('Você selecionou o D12!')
+        sleep(0.5)
+        print('Rolando dado...')
+        sleep(2)
+        print('Seu resultado: {}'.format(d12))
+        sleep(0.5)
+        esc = int(input('Aperte 6 para selecionar um novo dado:'))
+        while esc != 6:
+            print('Valor inválido! Por favor, escolha entre os valores válidos!')
+            esc = int(input('Aperte 6 para selecionar um novo dado:'))
+    if esc == 5:
+        print('Você selecionou o D20!')
+        sleep(0.5)
+        print('Rolando dado...')
+        sleep(2)
+        print('Seu resultado: {}'.format(d20))
+        sleep(0.5)
+        esc = int(input('Aperte 6 para selecionar um novo dado:'))
+        while esc != 6:
+            print('Valor inválido! Por favor, escolha entre os valores válidos!')
+            esc = int(input('Aperte 6 para selecionar um novo dado:'))
+    if esc == 7:
+        print('Muito obrigado por usar o programa! Boa jornada!')
+        print('=' * 20, '\033[36mFim do programa\033[m', '=' * 20)
