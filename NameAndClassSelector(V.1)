@@ -1,0 +1,12 @@
+print('=' * 20, '\033[36mContador de membros da party\033[m', '=' * 20)
+name = 0
+c = 0
+nump = int(input('Quantos membros da party?:'))
+lista = []
+for c in range(1, nump + 1):
+    lista.append(input('Digite o {}º nome:'.format(c)).strip().capitalize())
+print(lista)
+classe = []
+for c in range(0, nump):
+    classe.append(input('Qual a classe de {}'.format(lista[c])))
+print(lista + classe)
